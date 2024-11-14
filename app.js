@@ -5,10 +5,14 @@ dbConnect();
 const personRoutes = require('./routes/person.routes')
 const menuRoutes = require('./routes/menu.routes')
 
+const dotenv = require('dotenv'); 
+dotenv.config(); 
+
+const port = process.send.PORT || 4044
 
 app.use(express.json()); 
 app.use('/person',personRoutes)
 app.use('/menu', menuRoutes)
 
 
-app.listen(4044); 
+app.listen(port); 
