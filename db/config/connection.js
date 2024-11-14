@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config(); 
 
 function dbConnect(){
-    mongoose.connect(process.env.MONGO_URL).then(()=>{
+    mongoose.connect(process.env.MONGO_PUBLIC_URL).then(()=>{
         console.log("connected to hotel db") ;
     })
 }
